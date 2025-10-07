@@ -13,7 +13,7 @@ class Navbar extends Component {
     return (
       <nav className="navbar">
         <div>
-          <NavLink to="./home">
+          <NavLink to="./">
             <img src={logo5} alt="logo" className="logo" />
           </NavLink>
           <span className="desktopName">Yasir Azeem</span>
@@ -24,7 +24,7 @@ class Navbar extends Component {
             className={this.state.clicked ? "#navbar active" : "#navbar"}
           >
             <li>
-              <NavLink to="./home" className="active">
+              <NavLink to="./" className="active">
                 
                 <i className="fa-solid fa-house"></i>Home
               </NavLink>
