@@ -1,0 +1,844 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color:transparent;
+}
+body{
+    color: white;
+    background-color:rgb(0, 0, 30);
+    overflow: hidden;
+    overflow-y: scroll;
+
+
+}
+/* ................................Navbar Css>>>>>>>>>>>>>>>>>>> */
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 1rem  2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    width: 75%;
+    max-width: 100%;
+    margin: auto;
+  }
+  .desktopName {
+    font-size: 24px;
+    padding: 0 15px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  #navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+  }
+  #navbar li a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+  }
+  #navbar li a:hover,
+  #navbar li a.active {
+    color: rgb(163, 97, 226);
+  }
+  #navbar li a:hover::after,
+  #navbar li a.active::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(163, 97, 226);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+  }
+  #mobile {
+    display: none;
+  }
+  #mobile i {
+    color: #a941d2;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+  }
+  @media  (min-width: 360px) and (max-width: 769px) {
+    #navbar {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
+      position: fixed;
+      top: 90px;
+      right: -300px;
+      width: 225px;
+      height: 100vh;
+      background: rgb(0, 0, 30);
+      box-shadow: 0 40px 60px rgba(0, 0, 0, 0.01);
+      padding: 40px 0 0 10px;
+      transition: 0.3s ease-in-out;
+      margin-right: 15px;
+    }
+    #navbar li {
+      margin-bottom: 25px;
+    }
+    #mobile {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    #mobile i {
+      font-size: 29px;
+      padding-right: 10px;
+      cursor: pointer;
+    }
+    #navbar.active {
+      right: 0px;
+    }
+   
+  }
+/* ..................................HOME Css.............   */
+
+
+.wave {
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite; /* Never stop waving :) */
+    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  @keyframes wave-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    } /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    } /* Reset for the last half to pause */
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .container {
+    max-width: 578px;
+    /* background-color: pink; */
+    margin: 0 auto;
+  }
+  .services {
+    margin: 10px 0;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+  }
+  p {
+    color: rgb(248, 246, 246);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: "Poppins",sans-serif;
+    text-align: left;
+  }
+  .Typewriter__wrapper {
+    font-size: 1.5rem;
+    color: #cd5ff8 !important;
+    font-weight: 600 !important;
+    font-family: "Poppins",sans-serif;
+    text-align: left;
+  }
+  
+  .row {
+    width: 100%;
+    display: flex;
+    /* flex-direction:; */
+    justify-content: space-around;
+    margin: 50px 0;
+    align-items: center;
+    font-family: "Poppins", "sans-serif";
+  }
+  
+  .col-md-7 {
+    /* background-color: palevioletred; */
+    width: 50%;
+  }
+  .col-md-5 {
+    /* background-color: goldenrod; */
+    /* flex-direction: column;
+      align-items: right;
+      justify-content: space-around; */
+    width: 50%;
+  }
+  
+  .img-fluid {
+    /* background-color: yellowgreen; */
+    width: 25rem;
+    margin: 4rem  10rem;
+    object-fit: cover;
+    text-align: right;
+  }
+  .purple {
+    color: #cd5ff8;
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  @media (max-width: 768px) {
+    .purple{
+      font-size: 1rem;
+      font-family: "Poppins", sans-serif;
+    }
+    
+  }
+  #element {
+    color: rgb(134, 134, 230);
+  }
+  .sm {
+    font-size: 15px;
+  }
+  .text-center{
+      text-align: center;
+  }
+  .btn-like {
+    cursor: pointer;
+    font-size: 80px;
+    text-align: right;
+  }
+  .text-right{
+    text-align: right;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-family: "Poppins",sans-serif;
+  }
+  .btn-like:hover{
+  -webkit-transform: translateY(-2px)!important;
+  transform: translateY(-2px)!important;
+  }
+  .error-message{
+    font-size: 12px;
+    color: red;
+    text-align: right;
+    
+  }
+  .heading{
+    font-family: "Poppins",sans-serif;
+    text-align: left;
+    font-size: 2.5rem;
+  }
+  .heading-name{
+    text-align: left;
+    font-size: 2rem;
+  
+  }
+  @media screen and (max-width : 768px) {
+    .services {
+      margin: 50px 0;
+      display: flex;
+      justify-content:left;
+      align-items: left;
+    }
+    .heading{
+      font-size: 1.5rem;
+      text-align: left;
+    }
+    .heading-name{
+      font-size: 2rem;
+      text-align: left;
+    }
+    .Typewriter__wrapper {
+      font-size: 1.1em !important;
+      color: rgb(163, 97, 226) !important;
+      font-weight: 500 !important;
+      font-family: "Poppins",sans-serif;
+      text-align: left;
+      /* padding-left: 15px;
+      padding-right: 15px; */
+  
+    }
+    p{
+      color: rgb(248, 246, 246);
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-family: "Poppins",sans-serif;
+      text-align: left;
+    }
+    .row {
+      width: 100%;
+      display: flex;
+      flex-direction:column;
+      justify-content: space-around;
+      margin: 50px 0;
+      align-items: center;
+      font-family: "Poppins", "sans-serif";
+    }
+  .img-fluid{
+    text-align: center;
+    width: 35rem;
+    margin: 2rem  5rem;
+    object-fit: cover;
+  }
+  .text-right{
+    text-align: left;
+  }
+  
+  
+    
+  }
+
+
+  /* ......................Skills CSS............. */
+
+
+
+
+  .container {
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  .row {
+    width: 100%;
+    display: flex;
+    /* flex-direction:; */
+    justify-content: space-around;
+    /* margin: 50px 0; */
+    align-items: left;
+    font-family: "poppins", "sans-serif";
+  }
+  p {
+    color: rgb(248, 246, 246);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  
+  .about-section {
+    position: relative !important;
+    padding-top: 150px !important;
+    padding-bottom: 30px !important;
+    background-image: linear-gradient(
+      to bottom left,
+      rgba(17, 16, 16, 0.582),
+      rgba(12, 8, 24, 0.904)
+    ) !important;
+    background-image: var(--section-background-color) !important;
+    color: #fff !important;
+  }
+  .project-heading {
+    color: #fff !important;
+    font-size: 2.3em !important;
+    font-weight: 500 !important;
+    padding-top: 10px !important;
+  }
+  .col-md-7 {
+    /* background-color:pink; */
+    justify-content: right;
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  h1 {
+    font-size: 2.1em;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .qoute-card-view {
+    /* background-color: blue; */
+    border: none !important;
+    color: #fff !important;
+    background-color: initial !important;
+  }
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    border-radius: 0.25rem;
+    word-wrap: break-word;
+  }
+  blockqoute {
+    margin: 0 0 1rem;
+  }
+  .blockqoute p {
+    font-size: 1.25rem;
+    margin-bottom: 0 0 16px;
+    text-align: left;
+    font-family: "Nunito-sans", sans-serif;
+  }
+  
+  .about-img {
+    padding-top: 120px;
+    padding-bottom: 50px;
+  }
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* marquee */
+  .marquee-container {
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid white; */
+    margin-bottom: 5px;
+    --pause-on-hover: paused;
+    --pause-on-click: paused;
+    width: 100%;
+    transform: none;
+  }
+  
+  .marquee {
+    /* background-color: pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* .initial-child-container{
+      background-color: goldenrod;
+    
+  } */
+  .initial-child-container {
+    display: flex;
+    animation: scrolling 10s linear infinite;
+  }
+  
+  .child {
+    flex: 0 0 16vw;
+    margin: 0;
+    border: 2px solid black;
+    /*   flex: 0 0 20vw; */
+    /*   margin: 0 2vw; */
+  }
+  
+  .child img {
+    flex: 0 0 16vw;
+    width: 100%;
+    /* height: 100vw; */
+    /*   padding: 0 20px; */
+    /* object-fit:contain; */
+  }
+  
+  @keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translatex(-144vw);
+    }
+  }
+  .img-review {
+    /* background-color: purple; */
+    object-fit: cover !important;
+    width: 400px;
+    height: 220px;
+    border-radius: 5px;
+    margin-right: 4px;
+  }
+  @media screen and (max-width: 768px) {
+    .row {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      margin: 50px 0;
+      align-items: center;
+      font-family: "poppins", "sans-serif";
+    }
+    .col-md-7 {
+      /* background-color:pink; */
+      justify-content: center;
+      padding-top: 30px;
+      padding-bottom: 50px;
+    }
+    h1 {
+      font-size: 2.1em;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+    .img-fluid {
+      vertical-align: middle;
+      max-width:20rem;
+      height: auto;
+    
+    }
+    p {
+      color: rgb(248, 246, 246);
+      margin-top:0;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      text-align: center;
+    }
+    
+    
+    
+  
+  }
+
+  
+
+
+   /* .......Exprience...... */
+   .section_title.center{
+    text-align: center;
+  }
+  
+  .section_title p{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #a941d2;
+    text-align: center;
+  }
+  .section_title h2{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.5;
+    color: #5f74eb;
+    text-transform: capitalize;
+  }
+  .experience-items{
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 25px;
+  }
+  .experience-item{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 48%;
+    flex: 0 0 48%;
+    max-width: 35%;
+  }
+  .experience-info{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .experience-info p{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #a941d2;
+    opacity: 1;
+    -webkit-animation: showText 0.5s 1s linear forwards;
+    animation: showText 0.5s 1s linear forwards;
+
+  }
+  .progress-line{
+    margin-top: 7px;
+    height: 10px;
+    width: 100%;
+    background-color: #cdcdcd;
+    border-radius: 50px;
+    position: relative;
+
+  }
+  .progress-line span{
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    animation: animated 1s cubic-bezier(1,0,0.5,1) forwards;
+    height: 100%;
+    position: absolute;
+    border-radius: 50px;
+    background-color: #cd5ff8;
+    transition: 1s all;
+
+  }
+  .progress-line span.animate{
+    -webkit-animation: animate 1.5s 0.5s cubic-bezier(1,0,0.5,1) forwards;
+    animation: animate 1.5s 0.5s cubic-bezier(1,0,0.5,1) forwards;
+
+  }
+   @-webkit-keyframes showText{
+    100%{
+      opacity: 1; 
+    }
+  }
+  @keyframes showText{
+    100%{
+      opacity: 1;
+    }
+  } 
+   @-webkit-keyframes animate{
+    100%{
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+  @keyframes animate{
+    100%{
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+
+    }
+  } 
+  /* ..................................Projects Css.......... */
+  
+
+
+
+  
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: pink; */
+    flex-direction: column;
+  
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .card-container {
+    width: 15rem;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 0px rgba(59, 8, 8, 0.6);
+    display: flex;
+    /* height: fit-content; */
+    margin: 0.5rem;
+    background-color: white;
+    padding: 1rem 2rem;
+  }
+  .heading-project {
+    color: #fff !important;
+    font-size: 2.3em !important;
+    font-weight: 500 !important;
+    padding-top: 10px !important;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  .project-card {
+    margin-right: 20px !important;
+    height: auto !important;
+    display: flex;
+    justify-content: space-evenly;
+    width: fit-content;
+    
+  }
+  .project-card-view {
+    display: flex;
+    justify-content: space-around;
+  
+    color: #100c0c !important;
+    background-color: initial !important;
+    opacity: 0.9 !important;
+    transition: all 0.5s ease 0s !important;
+    height: 100% !important;
+    border: 1px solid rgba(129, 72, 144, 0.561) !important;
+  }
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: initial;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+  }
+  
+  .card-img {
+    width: 50vw;
+    border-radius: 1rem 1rem 0 0;
+  }
+  .card-title,
+  .card-description {
+    margin: 0.5rem 5%;
+  }
+  .card-btn {
+    text-align: center;
+    width: 90%;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    background-color: #2563ea;
+    color: white;
+    margin: 0.5rem 0.5rem;
+    text-decoration: none;
+  }
+  @media  screen and(max-width
+  :768px) {
+    .row {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: 10px;
+    }
+    
+  }
+
+
+
+/* ..................Contact...... */
+
+
+
+
+
+
+svg{
+    /* object-fit: cover; */
+    width: 1rem;
+    height: 1rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    overflow: hidden;
+    
+}
+.table td{
+    padding: 0.50rem;
+    vertical-align: top;
+    min-width: 130px;
+    background: rgb(0, 0, 30);
+    color: #fff;
+}
+.col h1{
+    font-size: 2.1em;
+    padding-bottom: 20px;
+}
+.mt-3{
+    margin-top: 1rem !important;
+}
+.text-white{
+    color:#fff !important;
+}
+
+.box-shadow{
+    box-shadow: none;
+}
+.border-dark{
+    color:#e6ebf0!important;
+}
+.bg-dark{
+    background:#c7d5e2!important;
+}
+.text-right{
+    text-align: right;
+}
+
+
+/* contactform */
+.container{
+    width: 100%;
+  }
+   #form1{
+    width: 100vh;
+    background-color: whitesmoke;
+    
+    
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  h1{
+      font-family: "Poppins",sans-serif ;
+  }
+  
+  
+  
+  
+  .btn-outline-primary{
+    text-align: left;
+    justify-content: left;
+  }
+  /* .....................Footer........... */
+  
+  
+  
+  
+  .footer {
+      background:rgba(0, 30, 30,0.06);
+      /* width: 100vw; */
+      max-width: 100%;
+      height: 8rem;
+      padding: 2rem 3rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font: weight 300px;
+       bottom: 0!important;
+        padding-top: 10px!important;
+        padding-bottom: 8px!important
+    }
+    /* .row {
+      /* background-color: yellow; */
+    
+    .footer-body {
+      /* background-color: green; */
+      width: 30vw;
+    }
+    .footer-icons {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin: 1rem;
+      cursor: pointer;
+    }
+    .socialmedia-icons a  svg{
+      /* text-decoration: none; */
+      width: 2rem;
+      height: 3rem;
+      margin: 1.5rem;
+      
+    }
+    .socialmedia-icons a:hover svg{
+        color: #cd5ff8;
+        padding-bottom: 0.5rem;
+        transition:0.5s ease-in-out;
+    }
+    @media screen and(max-width:768px) {
+      .footer-body{
+        text-align: center;
+      }
+      
+    }
